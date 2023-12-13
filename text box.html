@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Text Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #editableTextBox {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>REQUEST</h1>
+    <div id="editableTextBox" contenteditable="true">Type your text here...</div>
+    
+    <script>
+        // Function to handle changes in the editable text box
+        function handleTextEdit() {
+            var textBoxContent = document.getElementById("editableTextBox").innerHTML;
+            console.log("Text Updated:", textBoxContent);
+            // You can perform additional actions with the updated text as needed
+        }
+
+        // Add event listener to the editable text box
+        document.getElementById("editableTextBox").addEventListener("input", handleTextEdit);
+    </script>
+</body>
+</html>
